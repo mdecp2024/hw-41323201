@@ -141,26 +141,135 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Attendance << <a href='Attendance.html'>Previous</a> <a href='HW Triangle Star.html'>Next</a> >> HW Triangle Star<br /><h1>HW 1</h1>
-<h4>主題: 基於瀏覽器的分散式版次管理與整合程式開發環境 (10%)<span style="background-color: #ffff99;"><br/></span></h4>
-<p style="padding-left: 30px;">USB 隨身碟:</p>
-<p style="padding-left: 60px;">下載 <a href="http://229.cycu.org/python_2025_lite.7z">python_2025_lite.7z</a> (428 MB, 解開壓縮後約 1.5 GB)</p>
-<p style="padding-left: 30px;"><a href="https://mde.tw/cp2024/content/Jupyter.html">Jupyter</a></p>
-<p style="padding-left: 30px;">What are Github and Codespaces?</p>
-<p style="padding-left: 60px;"><a href="https://docs.github.com/en/get-started/start-your-journey/hello-world">Hello World - GitHub Docs</a></p>
-<p style="padding-left: 30px;">利用包含學號的字串作為帳號, 申請免費使用 Github.</p>
-<p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 1</p>
-<hr/>
-<p>PART 1: Creating the basics 資料整理 (10%)</p>
-<p>啟動可攜程式系統後, 在命令列中:</p>
-<p>y:\&gt;cd notebook</p>
-<p>y:\notebook&gt;jupyter lab --collaborative</p>
-<p>進入 <a href="./../downloads/01_string_input_print.ipynb">01_string_input_print.ipynb</a> 練習如何修改 PART1 notebook 後存檔, 上傳至作業倉儲中的 downloads 目錄後, 透過 <a href="https://nbviewer.org/">https://nbviewer.org/</a> 將已經提交的 <a href="./../downloads/01_string_input_print.ipynb">01_string_input_print.ipynb</a>, 嵌入下列網頁中.</p>
-<p><iframe height="400" src="https://nbviewer.org/urls/mde.tw/cp2024_hw/downloads/01_string_input_print.ipynb" width="600"></iframe></p>
-<p>上列 iframe 標註的 html 語法:</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;iframe width="600" height="400" src="https://nbviewer.org/urls/mde.tw/cp2024_hw/downloads/01_string_input_print.ipynb"&gt;&lt;/iframe&gt;</pre>
-<p>完成上述流程整理後, 請將 HW1 自評分數輸入 cp2024 自評表單中.</p>
-<br />Attendance << <a href='Attendance.html'>Previous</a> <a href='HW Triangle Star.html'>Next</a> >> HW Triangle Star</div>
+    <div id="tipue_search_content">HW 1 << <a href='HW 1.html'>Previous</a> <a href='HW 1 Exam.html'>Next</a> >> HW 1 Exam<br /><h1>HW Triangle Star</h1>
+<p>向ChatGPT詢問20種五階金字塔的寫法</p>
+<p></p>
+<p>幫我用python寫一個五階金字塔，由*組成，給我20種不同寫法</p>
+<p>1. 基本迴圈</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 6):
+    print(' ' * (5 - i) + '*' * (2 * i - 1))
+</pre>
+<p><br/>2. 使用字符串連接</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 6):
+    spaces = ' ' * (5 - i)
+    stars = '*' * (2 * i - 1)
+    print(spaces + stars)
+</pre>
+<p>3. 使用格式化字串</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 6):
+    print(f"{' ' * (5 - i)}{'*' * (2 * i - 1)}")
+</pre>
+<p>4. 列表生成式</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">pyramid = [' ' * (5 - i) + '*' * (2 * i - 1) for i in range(1, 6)]
+print('\n'.join(pyramid))
+</pre>
+<p>5. 使用函數</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_pyramid(n):
+    for i in range(1, n + 1):
+        print(' ' * (n - i) + '*' * (2 * i - 1))
+
+print_pyramid(5)
+</pre>
+<p>6. 反向迴圈</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(5, 0, -1):
+    print(' ' * (5 - i) + '*' * (2 * i - 1))
+</pre>
+<p>7. 使用 <code>join</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 6):
+    print(''.join([' ' * (5 - i), '*' * (2 * i - 1)]))
+</pre>
+<p>8. 使用 <code>map</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 6):
+    print(''.join(map(str, [' ' * (5 - i), '*' * (2 * i - 1)])))
+</pre>
+<p>9. 使用遞迴</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_recursive(n, current=1):
+    if current &gt; n:
+        return
+    print(' ' * (n - current) + '*' * (2 * current - 1))
+    print_recursive(n, current + 1)
+
+print_recursive(5)
+</pre>
+<p>10. 使用 <code>while</code> 迴圈</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">i = 1
+while i &lt;= 5:
+    print(' ' * (5 - i) + '*' * (2 * i - 1))
+    i += 1
+</pre>
+<p>11. 使用 <code>str.format</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 6):
+    print('{}{}'.format(' ' * (5 - i), '*' * (2 * i - 1)))
+</pre>
+<p>12. 使用 <code>f-string</code> 和 <code>list comprehension</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">pyramid = [f"{' ' * (5 - i)}{'*' * (2 * i - 1)}" for i in range(1, 6)]
+print('\n'.join(pyramid))
+</pre>
+<p>13. 使用 <code>print</code> 的多參數</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 6):
+    print(' ' * (5 - i), '*' * (2 * i - 1), sep='')
+</pre>
+<p>14. 使用 <code>zip</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">spaces = [' ' * (5 - i) for i in range(1, 6)]
+stars = ['*' * (2 * i - 1) for i in range(1, 6)]
+for s, st in zip(spaces, stars):
+    print(s + st)
+</pre>
+<p>15. 使用 <code>reduce</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from functools import reduce
+pyramid = reduce(lambda acc, i: acc + [' ' * (5 - i) + '*' * (2 * i - 1)], range(1, 6), [])
+print('\n'.join(pyramid))
+</pre>
+<p>16. 使用 <code>numpy</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import numpy as np
+pyramid = np.array([' ' * (5 - i) + '*' * (2 * i - 1) for i in range(1, 6)])
+print('\n'.join(pyramid))
+</pre>
+<p>17. 使用類別</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">class Pyramid:
+    def __init__(self, height):
+        self.height = height
+
+    def draw(self):
+        for i in range(1, self.height + 1):
+            print(' ' * (self.height - i) + '*' * (2 * i - 1))
+
+p = Pyramid(5)
+p.draw()
+</pre>
+<p>18. 使用生成器</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def generate_pyramid(n):
+    for i in range(1, n + 1):
+        yield ' ' * (n - i) + '*' * (2 * i - 1)
+
+for line in generate_pyramid(5):
+    print(line)
+</pre>
+<p>19. 使用 <code>itertools</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from itertools import repeat
+for i in range(1, 6):
+    print(''.join(repeat(' ', 5 - i) + repeat('*', 2 * i - 1)))
+</pre>
+<p>20. 使用 <code>string</code> 模組</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import string
+for i in range(1, 6):
+    print(string.whitespace * (5 - i) + '*' * (2 * i - 1))
+</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;pythonw.exe -u "triangle_star.py"
+
+    *
+
+   ***
+
+  *****
+
+ *******
+
+*********
+
+&gt;Exit code: 0</pre>
+<p><br/><br/></p>
+<p></p><br />HW 1 << <a href='HW 1.html'>Previous</a> <a href='HW 1 Exam.html'>Next</a> >> HW 1 Exam</div>
         
     <!-- footer -->
       <div class="container">
