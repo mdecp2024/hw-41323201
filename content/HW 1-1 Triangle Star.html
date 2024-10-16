@@ -1,0 +1,323 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cp_hw</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>41323201- cp2024 作業網站</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">41323201- cp2024 作業網站</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='about.html'>about</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='Hardware 1.html'>Hardware 1</a><ul class='dropdown'><li><a href='HW 1-1 Triangle Star.html'>HW 1-1 Triangle Star</a><li><a href='HW 1-2 模擬排列.html'>HW 1-2 模擬排列</a><li><a href='硬體 1 考試.html'>硬體 1 考試</a></li></ul><li class='has-children'><a href='硬質合金2.html'>硬質合金2</a><ul class='dropdown'><li><a href='硬體 2 考試.html'>硬體 2 考試</a></li></ul><li class='has-children'><a href='硬質合金3.html'>硬質合金3</a><ul class='dropdown'><li><a href='硬體 3 考試.html'>硬體 3 考試</a></li></ul><li class='has-children'><a href='硬質合金4.html'>硬質合金4</a><ul class='dropdown'><li><a href='硬體 4 考試.html'>硬體 4 考試</a></li></ul><li><a href='最終報告.html'>最終報告</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Hardware 1 << <a href='Hardware 1.html'>Previous</a> <a href='HW 1-2 模擬排列.html'>Next</a> >> HW 1-2 模擬排列<br /><h1>HW 1-1 Triangle Star</h1>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">向ChatGPT詢問20種五階金字塔的寫法</span></span></p>
+<p></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">幫我用python寫一個五階金字塔，由*組成，給我20個不同的寫法</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">1.基本迴圈</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">對於範圍 (1, 6) 內的 i：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(' ' * (5 - i) + '*' * (2 * i - 1))</span></span><span></span>
+</pre>
+<p><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2.使用字串連接</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">For i in the range (1, 6):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    Space = ' ' * (5 - i)</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    star = '*' * (2 * i - 1)</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    列印（空格+星號）</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">3. Using format strings</span></span></span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">For i in the range (1, 6):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(f"{' ' * (5 - i)}{'*' * (2 * i - 1)}")</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">4.列表產生方式</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">monument = [' ' * (5 - i) + '*' * (2 * i - 1) for i in range(1, 6)]</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+print('\n'.join(pyramid))</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">5. 使用函數</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">def print_pyramid(n):</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    對於範圍 (1, n + 1) 中的 i：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        print(' ' * (n - i) + '*' * (2 * i - 1))</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+Printing Pyramid (5)</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">6.反向迴圈</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">對於範圍 (5, 0, -1) 內的 i：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(' ' * (5 - i) + '*' * (2 * i - 1))</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">7. Use</span></span></span></span><code>join</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">For i in the range (1, 6):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(''.join([' ' * (5 - i), '*' * (2 * i - 1)]))</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">8. Use</span></span></span></span><code>map</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">For i in the range (1, 6):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(''.join(map(str, [' ' * (5 - i), '*' * (2 * i - 1)])))</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">9. 使用遞回</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">def print_recursive(n, currently=1):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    如果當前&gt; n：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        return</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(' ' * (n - current) + '*' * (2 * current - 1))</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print_recursive(n, current + 1)</span></span></span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+遞歸列印(5)</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">10.使用</span></span><code>while</code><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">迴圈</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">I = 1</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+當我 &lt;= 5 時：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(' ' * (5 - i) + '*' * (2 * i - 1))</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    I += 1</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">11. Use</span></span></span></span><code>str.format</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">For i in the range (1, 6):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print('{}{}'.format(' ' * (5 - i), '*' * (2 * i - 1)))</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">12. Use </span></span></span></span><code>f-string</code><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">and</span></span></span></span><code>list comprehension</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">金字塔 = [f"{' ' * (5 - i)}{'*' * (2 * i - 1)}" for i in range(1, 6)]</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+print('\n'.join(pyramid))</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">13. 使用</span></span><code>print</code><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">的多參數</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">For i in the range (1, 6):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(' ' * (5 - i), '*' * (2 * i - 1), sep='')</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">14. Use</span></span></span></span><code>zip</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">NULL = [' ' * (5 - i) for i in range(1, 6)]</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+星星 = ['*' * (2 * i - 1) for i in range(1, 6)]</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+對於 zip 中的 s、st（空格、星號）：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    Print (s + st)</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">15. Use</span></span></span></span><code>reduce</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">從 functools 匯入減少</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+pyramid = reduce(lambda acc, i: acc + [' ' * (5 - i) + '*' * (2 * i - 1)], range(1, 6), [])</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+print('\n'.join(pyramid))</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">16. Use</span></span></span></span><code>numpy</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">將 numpy 導入為 np</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+金字塔 = np.array([' ' * (5 - i) + '*' * (2 * i - 1) for i in range(1, 6)])</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+print('\n'.join(pyramid))</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">17. 使用類別</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">金字塔類：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    def __init__(self, height):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        Self height = height</span></span></span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    def 繪製（自身）：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        對於範圍內的 i(1, self.height + 1):</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+            print(' ' * (self.height - i) + '*' * (2 * i - 1))</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+p = pyramid(5)</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+p.draw()</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">18. Use Generators</span></span></span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">defgenerate_pyramid(n):</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    對於範圍 (1, n + 1) 中的 i：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        產量 ' ' * (n - i) + '*' * (2 * i - 1)</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+對於generate_pyramid(5)中的行：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    Print (row)</span></span></span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">19. Use</span></span></span></span><code>itertools</code></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">從 itertools 匯入重複</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+對於範圍 (1, 6) 內的 i：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(''.join(重複(' ', 5 - i) + 重複('*', 2 * i - 1)))</span></span><span></span>
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">20. 使用</span></span><code>string</code><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">模組</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">導入字串</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+For i in the range (1, 6):</span></span></span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    print(string.whitespace * (5 - i) + '*' * (2 * i - 1))</span></span><span></span>
+</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&gt;pythonw.exe -u“triangle_star.py”</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    *</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+   ***</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+  *****</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ ******</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+*********</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+&gt;退出代碼：0</span></span></pre>
+<p></p>
+<br />Hardware 1 << <a href='Hardware 1.html'>Previous</a> <a href='HW 1-2 模擬排列.html'>Next</a> >> HW 1-2 模擬排列</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
