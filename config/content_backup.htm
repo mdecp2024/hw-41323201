@@ -179,9 +179,67 @@ For i in the range (1, 6):</span></span></span></span><span></span><span style="
 <h2>HW 1 Exam</h2>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">每六人為一組進行良好的程序練習</span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">透過Jupyterlab良好的網頁，輪流指定各組編寫的主題1相關的程式練習，以及網頁內容（localhost與Codespaces環境）編輯。</span></span></p>
-<h3>W7</h3>
+<h3>w7</h3>
 <p>如何在倉儲中增加Brython:</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/vB0rFaSJhcc" width="560"></iframe></p><h1>HW 2</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/vB0rFaSJhcc" width="560"></iframe></p>
+<h3>w10</h3>
+<p><strong>題目一</strong></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/8er6R24e5F8" width="560"></iframe></p>
+<p><span>Brython頁面:只需直接複製指令</span></p>
+<p><span></span><span>SciTE 編輯器:新增檔案檔名後須加上".py"再複製指令</span></p>
+<p><span>命令提示字元視窗:先打入cmd，再輸入python，便可輸入指令</span></p>
+<p><span>Jupyter Lab:先在命令提示字元視窗輸入cd Notebook，再輸入jupyter lab --collaborative，便可打開Jupyter Lab，新增網頁將指令貼上</span></p>
+<p><span>Codespaces:新增網頁，安裝python模組，在上方打入指令</span></p>
+<p><strong>題目二</strong></p>
+<p><strong></strong></p>
+<p>Python 變數命名的規則:</p>
+<p><strong></strong></p>
+<ol>
+<li>以字母或下劃線開頭：變數名稱必須以字母（<code>a-z</code> 或 <code>A-Z</code>）或下劃線（<code>_</code>）開頭，後面可以跟數字或字母。</li>
+<li>不能使用 Python 關鍵字：Python 的關鍵字（如 <code>if</code>、<code>for</code>、<code>while</code> 等）有特殊的語法意圖，不能用作變數名稱。</li>
+<li>不區分大小寫：Python 是大小寫敏感的，因此 <code>my_var</code> 和 <code>MY_VAR</code> 是兩個不同的變數。</li>
+<li>避免使用特殊符號：變數名稱中只能使用字母、數字和下劃線，不能包含如 <code>@</code>, <code>#</code>, <code>!</code>, <code>*</code> 等特殊字符。</li>
+<li>遵循 PEP 8 風格指南：根據 Python 官方的編碼風格指南，變數名稱應使用小寫字母和下劃線分隔單詞（例如 <code>user_name</code>），類別名稱使用駝峰式命名（例如 <code>MyClass</code>）。</li>
+</ol>
+<p><span>針對 Python 程式命名的規則編寫程式:</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import keyword
+
+# 1. 顯示所有 Python 的關鍵字
+print("Python 關鍵字 (保留字):")
+print(keyword.kwlist)  # 輸出所有關鍵字
+
+# 2. 合法的變數名稱（遵守命名規範）
+user_name = "Alice"
+user_age = 30
+PI = 3.14159
+print(f"使用者名稱: {user_name}, 年齡: {user_age}, 圓周率: {PI}")
+
+# 3. 使用非法的變數名稱（關鍵字）
+# 關鍵字 'if' 是 Python 的保留字，這裡會引發 SyntaxError
+# if = "非法變數名稱"  # 取消註解這一行會引發錯誤
+
+# 4. 使用單下劃線開頭的變數（表示內部變數）
+_private_var = "這是內部變數"
+print(f"內部變數: {_private_var}")
+
+# 5. 使用雙下劃線開頭的變數（名稱重整）
+class MyClass:
+    def __init__(self):
+        self.__private_attribute = "隱藏屬性"
+    
+    def get_private_attribute(self):
+        return self.__private_attribute
+
+my_object = MyClass()
+print(f"透過方法訪問隱藏屬性: {my_object.get_private_attribute()}")
+
+# 6. 使用單下劃線作為不關心的變數
+for _ in range(3):  # 我們只關心迴圈次數，不關心具體的值
+    print("這是一次迴圈執行")
+</pre>
+<p></p>
+<p></p>
+<p><strong></strong></p><h1>HW 2</h1>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">主題：Python的數列、判斷式與重複迴圈 (20%)</span></span><span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Python 課程教材：</span></span><a href="https://www.learnpythonwithjupyter.com/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://www.learnpythonwithjupyter.com/</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> - PART 2 與 Part 3</span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">馬尼拉HW 1網頁資料整理與程序練習方法，整理以下（20%）：</span></span></p>
