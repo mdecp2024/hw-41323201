@@ -253,9 +253,58 @@ for _ in range(3):  # 我們只關心迴圈次數，不關心具體的值
 <p><span>這次利用五種不同的環境來運行Python，所以哪天你無法使用其中一種方式，使用其他還是可以寫程式，且找出如何讓這些環境運行Python的方式也很有趣。</span></p>
 <p><strong></strong></p>
 <h2>w11</h2>
+<p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1afc700cb1cbc2b47167eac2ec996de5c73ec852/q1.py">第一題的程式</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ctx = canvas.getContext("2d")
+<p>1. <strong>匯入模組</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import math</pre>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"><code>math</code> 是 Python 的數學模組，用來執行數學相關的計算。</div>
+</div>
+<p>在這段程式中，我們用到了 <code>math.sqrt</code> 函數來計算平方根，這是用來測量點與圓心之間的距離。</p>
+<p><br/>2. <strong>定義變數</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">size = 10
+radius = size // 2
+center = radius - 0.5</pre>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"><code>size</code> 是顯示區域的大小，設定為 <code>10</code>，表示會有 10 行與 10 列。</div>
+</div>
+<p><code>radius</code> 是圓的半徑，設定為 <code>size // 2</code>（整數除法），所以半徑為 <code>5</code>。</p>
+<p><code>center</code> 是圓心的座標，計算為 <code>radius - 0.5</code>，這樣可以更接近圓的中心位置，避免偏差。</p>
+<p><br/>3. <strong>雙層迴圈：生成圖案</strong></p>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">size = 10
+radius = size // 2
+center = radius - 0.5</pre>
+外層迴圈控制 列 (y)，內層迴圈控制 行 (x)，遍歷區域的每個點。</div>
+</div>
+<p><code>range(size)</code> 會產生從 <code>0</code> 到 <code>size-1</code> 的整數範圍。</p>
+<p></p>
+<p><br/>4. <strong>計算與圓心的距離</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">distance = math.sqrt((x - center) ** 2 + (y - center) ** 2)</pre>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">每個點 <code>(x, y)</code> 到圓心 <code>(center, center)</code> 的距離使用公式計算： <span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>距離</mtext><mo>=</mo><msqrt><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mtext>圓心x</mtext><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><mtext>圓心y</mtext><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow></semantics></math></span></span></span></div>
+</div>
+<p>將這個點的座標代入後，距離會決定該點是否屬於圓內。</p>
+<p></p>
+<p><br/>5. <strong>判斷並繪製圖案</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">if distance &lt;= radius:
+    print(" * ", end="")
+else:
+    print("   ", end="")
 </pre>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">如果距離 <code>distance</code> 小於或等於圓的半徑 <code>radius</code>，表示該點在圓內，則打印 <code>" * "</code>。</div>
+</div>
+<p>否則打印空白 <code>" "</code>，用來填充圓外的區域。</p>
+<p><code>end=""</code> 確保在同一行內打印多個字符。</p>
+<p></p>
+<p><br/>6. <strong>換行</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">print()</pre>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">內層迴圈完成一行後，透過這行程式碼換行，準備打印下一行。</div>
+</div>
+<p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1afc700cb1cbc2b47167eac2ec996de5c73ec852/q2.py">第二題的程式</a></p>
 <p><strong>1.導入所需的模組</strong></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html 
@@ -351,9 +400,8 @@ radius = 5  # 圓的半徑（格子單位）</pre>
 drawCircle(center, radius, gs)</pre>
 <div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">先繪製整個網格，然後在網格上繪製圓形。</div>
-</div>
-<p><strong></strong></p>
-<p><br/><strong></strong></p>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div>
 <p><strong></strong></p>
 <h1>HW 2</h1>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">主題：Python的數列、判斷式與重複迴圈 (20%)</span></span><span style="background-color: #ffff99;"><br/></span></h4>
@@ -643,3 +691,7 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
 </p>
+</div>
+<div id="gtx-trans" style="position: absolute; left: 262px; top: 9819.59px;">
+<div class="gtx-trans-icon"></div>
+</div>
