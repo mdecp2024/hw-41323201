@@ -415,29 +415,120 @@ drawCircle(center, radius, gs)</pre>
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">https://mde.tw/cp2024/content/Exam.html</div>
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div>
 </div><h3>w12_hw</h3>
-<p>第一題:input(), and print()</p>
-<p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/97c92c6039735f24f1afe6130a74b39c0ad84a6c/Jupyter1-1.py">What's your name?</a></span></p>
-<p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/97c92c6039735f24f1afe6130a74b39c0ad84a6c/Jupyter1-2.py">貓</a></span></p>
+<p></p>
+<p>第一題:Text, questions, and art (文字、問題和藝術)</p>
+<p>說明:Strings, input(), and print() (字串、input()和print())</p>
+<p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.1.py">What's your name?</a></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">input("What's your name?")</pre>
+<p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.2.py">cat</a></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">print ("   /\_/\   ")
+print (" &gt;^.^&lt;   ")
+print ("    / \    ")
+print ("   (___)___")</pre>
+<p></p>
+<p>第二題:Events and favorites(活動和最愛)</p>
+<p>說明:Variables and string concatenation(變數和字串連接)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/8214869adb6c98a2f05dfd4610676df5/raw/477730323d74f19acc83ec2e6c4f12ac72118872/w12-2.1.py">名字</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">first_name = "yu" #變數first_name為"自己的姓"
+last_name  = "chang" #變數last_name為"自己的名"
+print (first_name) #列印變數first_name
+print (last_name) #列印變數last_name</pre>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/8214869adb6c98a2f05dfd4610676df5/raw/477730323d74f19acc83ec2e6c4f12ac72118872/w12-2.2.py">名字+最愛的食物</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">name = input("What's your name?") #變數name為input所輸入之文字
+favorite_food = input ("What is your favorite food?") #變數favorite_food為input所輸入之文字
+print ("Hi! My name is " + name) #列印"Hi! My name is "(這段為文字) + name(name這個變數的數值)
+print ("My favorite food is " + favorite_food)  #列印"My favorite food is "(這段為文字) + favorite_food(favorite_food這個變數的數值)
+print (name + "'s favorite food is " + favorite_food) #列印name (數值)+ 's favorite food is (此段為文字)+favorite_food(數值)</pre>
+<p></p>
+<p>第三題:In a bookstore(在書店)</p>
+<p>說明:Lists and if... in... / else... (列表和<span>if... in... / else...)</span></p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/39538973a9b4443371d4430c95586417/raw/1582ceb6362b9010c83840c2706be3e1d6b340d6/w12-3.py">if</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">programming_books = ["Learn python", "Python for all",  "Intro to python"]
+print (programming_books)
+wanted_book = input("Hi! What book would you like to buy?")
+print (wanted_book)
+if wanted_book in programming_books:
+    print ("Yes, we sell it!")
+else:
+    print ("Sorry, we don't sell that book")</pre>
+<p></p>
+<p>第四題:Grocery shopping(雜貨店購物)</p>
+<p>說明:List methods: .append() and .remove() (列表方法:<span>.append() and .remove())</span></p>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/4f6638e0dbf4234b3afedb927313a7f8/raw/9d7066aa9d71759e726a35421040aa39448ed2ae/w12-4.py">append() and remove()</a></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">shopping_list = ["carrots", "chocolate", "olives"]
+print (shopping_list)
+new_item = input("What else do I have to buy?")
+
+if new_item in shopping_list:
+    print (new_item + " is/are already in the shopping list")
+    print (shopping_list) 
+else:
+    shopping_list.append(new_item)
+    print (shopping_list)
+    item_to_remove = input("What do I have to remove?")
+
+if item_to_remove in shopping_list:
+    shopping_list.remove(item_to_remove)
+    print (shopping_list)
+else:
+    print (item_to_remove + " is/are not in the list")
+    print (shopping_list)</pre>
+<p></p>
+<p>第五題:Customizing the burger menu(自訂漢堡菜單)</p>
+<p>說明:List methods: .index(), .pop(), and .insert() (列表方法:<span>.index(), .pop(), and .insert())</span></p>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/99b1fe638a0c11d3aaf5f459df0e449e/raw/59aeeff006f6349c30701b808d4091f3200889ca/w12-5">menu</a></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">todays_menu = ["burger", "salad", "coke"] #todays_menu變數=今天菜單["burger", "salad", "coke"
+side_dish_index = todays_menu.index("salad") #side_dish_index變數 = 今日菜單.找出"沙拉"位於字串中第幾個
+print (side_dish_index) #列印side_dish_index  列印他在第幾位
+todays_menu.pop(side_dish_index) #今日菜單.移除字串中的元素(side_dish_index變數"沙拉")  這裡意思是移除沙拉
+print (todays_menu) #列印今日菜單
+todays_menu.insert(side_dish_index, "fries") #今日菜單.在字串中插入(side_dish_index, "fries")   這裡意思是加入薯條
+print (todays_menu) #列印今日菜單</pre>
+<p></p>
+<p><a href="https://colorlib.com" target="_blank"></a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+<div class="container">
+<div class="row pt-3 mx-auto">
+<p><span></span></p>
 <p><span></span>第七題:</p>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/cca10a2d0d71926aeb293d76bf21ad74e4d7de7b/Jupyter7-1.py">五官</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">senses = ["eyes", "nose", "ears", "tongue", "skin"]
-print(senses)
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-1.py">五官</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義一個包含五種感官的清單
+senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print(senses)  # 輸出原始的感官清單
+
+# 將清單中索引為1的元素從 "nose" 改為 "smell"
 senses[1] = "smell"
-print(senses)
+print(senses)  # 輸出更新後的感官清單
+
+# 將索引範圍為3到5的元素（"tongue", "skin"）改為 ["taste", "touch"]
 senses[3:5] = ["taste", "touch"]
-print(senses)
+print(senses)  # 輸出更新後的感官清單
+
+# 將索引範圍從0到3，步長為2的元素（"eyes", "ears"）改為 ["sight", "hearing"]
 senses[0:3:2] = ["sight", "hearing"]
-print(senses)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/f5eb8968ad11cc60a54933d35c7dfc9e8ade1dbe/Jupyter7-2.py">行星</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">planets = ["Mercury", "Mars", "Earth", "Neptune"]
-print (planets)
+print(senses)  # 輸出最終更新後的感官清單</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-2.py">行星</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義一個行星列表
+planets = ["Mercury", "Mars", "Earth", "Neptune"]
+# 輸出原始行星列表
+print(planets)
+
+# 將 "Jupiter" 加入列表的末尾
 planets = planets + ["Jupiter"]
-print (planets)
+# 輸出更新後的行星列表
+print(planets)
+
+# 在索引 2 前插入 "Venus"
+# 先取出索引 0 到 1 的元素，然後加上 "Venus" 和索引 2 到 4 的元素
 planets = planets[0:2] + ["Venus"] + planets[2:5]
-print (planets)
+# 輸出再次更新的行星列表
+print(planets)
+
+# 在索引 5 位置後插入 "Uranus" 和 "Saturn"
+# 取出索引 0 到 4 的元素，加上新元素，然後加上索引 5 之後的元素
 planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+# 輸出最終的行星列表
 print(planets)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/03aacdd158b60ed8caacb49261ccaa5c8d7dc759/Jupyter7-3.py">房間</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-3.py">房間</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
 print(house)  # 原始列表
 
@@ -458,52 +549,66 @@ del house
 try:
     print(house)  # 此處會觸發 NameError
 except NameError:
-    print("The variable 'house' no longer exists.")
-</pre>
+    print("The variable 'house' no longer exists.")</pre>
 <p></p>
 <p><span></span>第八題:</p>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/fec45192bba5c3b35666186f882c17d5c4785563/Jupyter8-1.py">朋友喜歡的菜</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">friends = ["Geetha", "Luca", "Daisy", "Juhan"]
-dishes  = ["sushi", "burgers", "tacos", "pizza"]
-print ("My friends' names are:")
-print (friends)
-for index in range (0,4):
-    print ("index:  " + str(index))
-    print ("friend: " + friends[index])
-print ("Their favorite dishes are:")
-print (dishes)
-for index in range (0,4):
-    print ("index:  " + str(index))
-    print ("dish: " + dishes[index])
-for index in range (0,4):
-    print ("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter8-1.py">朋友喜歡的菜</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義朋友的名字列表
+friends = ["Geetha", "Luca", "Daisy", "Juhan"]  
+
+# 定義喜愛的食物列表
+dishes  = ["sushi", "burgers", "tacos", "pizza"]  
+
+# 打印朋友的名字
+print("My friends' names are:")  
+print(friends)  
+
+# 使用 for 迴圈遍歷朋友列表，打印索引和對應的朋友名字
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("friend: " + friends[index])  # 打印對應的朋友名字
+
+# 打印喜愛的食物
+print("Their favorite dishes are:")  
+print(dishes)  
+
+# 使用 for 迴圈遍歷食物列表，打印索引和對應的食物
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("dish: " + dishes[index])  # 打印對應的食物
+
+# 使用 for 迴圈，同時列出朋友和他們喜愛的食物
+for index in range(0, 4):  
+    print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])  </pre>
 <p></p>
 <p>第九題:</p>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/6c1583422b2669384b2d3f1db01f0b18a5a2fed0/Jupyter9-1.py">動物</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">animals = ["giraffe", "penguin", "dolphin"]
-print(animals)
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter9-1.py">動物</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 動物清單
+animals = ["giraffe", "penguin", "dolphin"]
+print(animals)  # 輸出清單
 
-# For each position in the list
-for i in range(0, len(animals)):
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):  # 使用 len() 動態取得清單長度
     print("-- Beginning of loop --")
-    # Print each element and its position
+    # 輸出每個元素及其位置
     print("The element in position " + str(i) + " is " + animals[i])
 
+# 想要看到的動物
 wanted_to_see = "penguin"
 
-# For each position in the list
+# 針對清單中的每個位置進行操作
 for i in range(0, len(animals)):
-    # If the current animal is what you really wanted to see
+    # 如果當前的動物是想看的那個
     if animals[i] == wanted_to_see:
-        # Print out that that's the animal you really wanted to see
+        # 輸出特別訊息
         print("I saw a " + animals[i] + " and I really wanted to see it!")
-    # If the current animal is not what you really wanted to see
+    # 如果當前的動物不是特別想看的那個
     else:
-        # Just print out that you saw it
-        print("I saw a " + animals[i])
-</pre>
+        # 輸出一般訊息
+        print("I saw a " + animals[i])</pre>
 <p></p>
 <p>第十題</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter10-1.py">物品位置</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
 print(accessories)
 
@@ -543,7 +648,9 @@ for i in range(len(accessories)):
     if i &gt;= position:
         print(f"The element {accessories[i]} is in position {i}, which is at least {position}")
 </pre>
-<p></p><h3>w13_hw</h3>
+<p></p>
+</div>
+</div><h3>w13_hw</h3>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/0e389de17ac3d429a774dcda259982b99dbf34c5/test-3.py">繪製兩個棋盤</a></p>
 <p></p>
