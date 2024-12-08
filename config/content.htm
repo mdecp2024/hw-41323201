@@ -418,8 +418,52 @@ drawCircle(center, radius, gs)</pre>
 <p>第一題:input(), and print()</p>
 <p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/97c92c6039735f24f1afe6130a74b39c0ad84a6c/Jupyter1-1.py">What's your name?</a></span></p>
 <p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/97c92c6039735f24f1afe6130a74b39c0ad84a6c/Jupyter1-2.py">貓</a></span></p>
-<p><span></span></p>
-<h3>w13_hw</h3>
+<p><span></span>第七題:</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/cca10a2d0d71926aeb293d76bf21ad74e4d7de7b/Jupyter7-1.py">五官</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print(senses)
+senses[1] = "smell"
+print(senses)
+senses[3:5] = ["taste", "touch"]
+print(senses)
+senses[0:3:2] = ["sight", "hearing"]
+print(senses)</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/f5eb8968ad11cc60a54933d35c7dfc9e8ade1dbe/Jupyter7-2.py">行星</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">planets = ["Mercury", "Mars", "Earth", "Neptune"]
+print (planets)
+planets = planets + ["Jupiter"]
+print (planets)
+planets = planets[0:2] + ["Venus"] + planets[2:5]
+print (planets)
+planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+print(planets)</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/03aacdd158b60ed8caacb49261ccaa5c8d7dc759/Jupyter7-3.py">房間</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+print(house)  # 原始列表
+
+# 刪除 "dining room"
+del house[1]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+
+# 刪除 "garden" 和 "balcony"
+del house[4:6]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "terrace"]
+
+# 刪除 "kitchen", "bedroom", 和 "terrace"
+del house[::2]
+print(house)  # ["living room", "bathoom"]
+
+# 刪除整個清單
+del house
+try:
+    print(house)  # 此處會觸發 NameError
+except NameError:
+    print("The variable 'house' no longer exists.")
+</pre>
+<p></p>
+<div id="gtx-trans" style="position: absolute; left: -15px; top: 435.525px;">
+<div class="gtx-trans-icon"></div>
+</div><h3>w13_hw</h3>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/0e389de17ac3d429a774dcda259982b99dbf34c5/test-3.py">繪製兩個棋盤</a></p>
 <p></p>
