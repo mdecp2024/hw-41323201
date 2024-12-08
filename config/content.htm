@@ -415,7 +415,6 @@ drawCircle(center, radius, gs)</pre>
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">https://mde.tw/cp2024/content/Exam.html</div>
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div>
 </div><h3>w12_hw</h3>
-<p></p>
 <p>第一題:Text, questions, and art (文字、問題和藝術)</p>
 <p>說明:Strings, input(), and print() (字串、input()和print())</p>
 <p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.1.py">What's your name?</a></span></p>
@@ -488,9 +487,63 @@ print (todays_menu) #列印今日菜單</pre>
 <p><a href="https://colorlib.com" target="_blank"></a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 <div class="container">
 <div class="row pt-3 mx-auto">
-<p><span></span></p>
-<p><span></span>第七題:</p>
-<p><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-1.py">五官</a></p>
+<p><span></span>第六題:Traveling around the world(環遊世界)</p>
+<p><span>說明:</span>List slicing(串列切片)</p>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/64cdc77ce914ffa42d41e0a20afe9da5f86b1368/Jupyter6-1.py">城市</a></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義一個名為 cities 的串列，包含五個城市名稱
+cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
+
+# 列印整個串列
+print (cities)  # ['San Diego', 'Prague', 'Cape Town', 'Tokyo', 'Melbourne']
+
+# 列印索引為 1 的元素
+print (cities[1])  # 'Prague'
+
+# 列印從索引 1 到 3 的元素（不包含索引 4）
+print (cities[1:4])  # ['Prague', 'Cape Town', 'Tokyo']
+
+# 列印從索引 1 到 3 的元素，間隔為 2
+print (cities[1:4:2])  # ['Prague', 'Tokyo']
+
+# 列印從索引 0 到 2 的元素（不包含索引 3）
+print (cities[0:3])  # ['San Diego', 'Prague', 'Cape Town']
+
+# 列印從開始到索引 2 的元素（不包含索引 3）
+print (cities[:3])  # ['San Diego', 'Prague', 'Cape Town']
+
+# 列印從索引 2 到 4 的元素（不包含索引 5）
+print (cities[2:5])  # ['Cape Town', 'Tokyo', 'Melbourne']
+
+# 列印從索引 2 到最後的元素
+print (cities[2:])  # ['Cape Town', 'Tokyo', 'Melbourne']
+
+# 列印從索引 0 到 4 的元素，每隔 2 個元素
+print (cities[0:5:2])  # ['San Diego', 'Cape Town', 'Melbourne']
+
+# 列印從頭到尾的元素，每隔 2 個元素
+print (cities[::2])  # ['San Diego', 'Cape Town', 'Melbourne']
+
+# 列印索引為 4 的元素
+print (cities[4])  # 'Melbourne'
+
+# 列印最後一個元素（索引 -1）
+print (cities[-1])  # 'Melbourne'
+
+# 列印從索引 -4 到 -2 的元素（不包含索引 -1）
+print (cities[-4:-1])  # ['Prague', 'Cape Town', 'Tokyo']
+
+# 列印從索引 3 到 1，反向取值
+print (cities[3:0:-1])  # ['Tokyo', 'Cape Town', 'Prague']
+
+# 列印從索引 -2 到 -4，反向取值
+print (cities[-2:-5:-1])  # ['Tokyo', 'Cape Town', 'Prague']
+
+# 列印整個串列，反轉順序
+print (cities[::-1])  # ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
+<p></p>
+<p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
+<p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
+<p><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-1.py">感</a><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-1.py">官</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義一個包含五種感官的清單
 senses = ["eyes", "nose", "ears", "tongue", "skin"]
 print(senses)  # 輸出原始的感官清單
@@ -528,7 +581,7 @@ print(planets)
 planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
 # 輸出最終的行星列表
 print(planets)</pre>
-<p><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-3.py">房間</a></p>
+<p><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-3.py">房子</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
 print(house)  # 原始列表
 
@@ -551,8 +604,9 @@ try:
 except NameError:
     print("The variable 'house' no longer exists.")</pre>
 <p></p>
-<p><span></span>第八題:</p>
-<p><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter8-1.py">朋友喜歡的菜</a></p>
+<p><span></span>第八題:My friends' favorite dishes(<span>我朋友最喜歡的菜</span>)</p>
+<p><span>說明:for ... in range() (循環控制語句)</span></p>
+<p data-pm-slice="1 1 []"><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter8-1.py">我朋友最喜歡的菜</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義朋友的名字列表
 friends = ["Geetha", "Luca", "Daisy", "Juhan"]  
 
@@ -581,7 +635,8 @@ for index in range(0, 4):
 for index in range(0, 4):  
     print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])  </pre>
 <p></p>
-<p>第九題:</p>
+<p>第九題:<span>At the zoo(</span><span>在動物園)</span></p>
+<p><span>說明:For loop with if... == ... / else</span>(在 for 迴圈中 逐一遍歷（迭代） 元素，並使用 if...else 條件判斷)</p>
 <p><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter9-1.py">動物</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 動物清單
 animals = ["giraffe", "penguin", "dolphin"]
@@ -607,7 +662,8 @@ for i in range(0, len(animals)):
         # 輸出一般訊息
         print("I saw a " + animals[i])</pre>
 <p></p>
-<p>第十題</p>
+<p>第十題<span>:Where are my gloves?</span><span>(</span>我的手套在哪裡？<span>)</span></p>
+<p><span>說明:For loop for searching(在 for 迴圈中 逐一遍歷（迭代） 元素，並使用 if...else 條件判斷))</span></p>
 <p><span>範例程式:</span><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter10-1.py">物品位置</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
 print(accessories)
@@ -650,6 +706,9 @@ for i in range(len(accessories)):
 </pre>
 <p></p>
 </div>
+</div>
+<div id="gtx-trans" style="position: absolute; left: 360px; top: 3942.93px;">
+<div class="gtx-trans-icon"></div>
 </div><h3>w13_hw</h3>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/0e389de17ac3d429a774dcda259982b99dbf34c5/test-3.py">繪製兩個棋盤</a></p>
