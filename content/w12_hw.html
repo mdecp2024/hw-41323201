@@ -146,25 +146,45 @@ img.add_border {
 <p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/97c92c6039735f24f1afe6130a74b39c0ad84a6c/Jupyter1-1.py">What's your name?</a></span></p>
 <p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/97c92c6039735f24f1afe6130a74b39c0ad84a6c/Jupyter1-2.py">貓</a></span></p>
 <p><span></span>第七題:</p>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/cca10a2d0d71926aeb293d76bf21ad74e4d7de7b/Jupyter7-1.py">五官</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">senses = ["eyes", "nose", "ears", "tongue", "skin"]
-print(senses)
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-1.py">五官</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義一個包含五種感官的清單
+senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print(senses)  # 輸出原始的感官清單
+
+# 將清單中索引為1的元素從 "nose" 改為 "smell"
 senses[1] = "smell"
-print(senses)
+print(senses)  # 輸出更新後的感官清單
+
+# 將索引範圍為3到5的元素（"tongue", "skin"）改為 ["taste", "touch"]
 senses[3:5] = ["taste", "touch"]
-print(senses)
+print(senses)  # 輸出更新後的感官清單
+
+# 將索引範圍從0到3，步長為2的元素（"eyes", "ears"）改為 ["sight", "hearing"]
 senses[0:3:2] = ["sight", "hearing"]
-print(senses)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/f5eb8968ad11cc60a54933d35c7dfc9e8ade1dbe/Jupyter7-2.py">行星</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">planets = ["Mercury", "Mars", "Earth", "Neptune"]
-print (planets)
+print(senses)  # 輸出最終更新後的感官清單</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-2.py">行星</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義一個行星列表
+planets = ["Mercury", "Mars", "Earth", "Neptune"]
+# 輸出原始行星列表
+print(planets)
+
+# 將 "Jupiter" 加入列表的末尾
 planets = planets + ["Jupiter"]
-print (planets)
+# 輸出更新後的行星列表
+print(planets)
+
+# 在索引 2 前插入 "Venus"
+# 先取出索引 0 到 1 的元素，然後加上 "Venus" 和索引 2 到 4 的元素
 planets = planets[0:2] + ["Venus"] + planets[2:5]
-print (planets)
+# 輸出再次更新的行星列表
+print(planets)
+
+# 在索引 5 位置後插入 "Uranus" 和 "Saturn"
+# 取出索引 0 到 4 的元素，加上新元素，然後加上索引 5 之後的元素
 planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+# 輸出最終的行星列表
 print(planets)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/03aacdd158b60ed8caacb49261ccaa5c8d7dc759/Jupyter7-3.py">房間</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter7-3.py">房間</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
 print(house)  # 原始列表
 
@@ -185,10 +205,107 @@ del house
 try:
     print(house)  # 此處會觸發 NameError
 except NameError:
-    print("The variable 'house' no longer exists.")
+    print("The variable 'house' no longer exists.")</pre>
+<p></p>
+<p><span></span>第八題:</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter8-1.py">朋友喜歡的菜</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義朋友的名字列表
+friends = ["Geetha", "Luca", "Daisy", "Juhan"]  
+
+# 定義喜愛的食物列表
+dishes  = ["sushi", "burgers", "tacos", "pizza"]  
+
+# 打印朋友的名字
+print("My friends' names are:")  
+print(friends)  
+
+# 使用 for 迴圈遍歷朋友列表，打印索引和對應的朋友名字
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("friend: " + friends[index])  # 打印對應的朋友名字
+
+# 打印喜愛的食物
+print("Their favorite dishes are:")  
+print(dishes)  
+
+# 使用 for 迴圈遍歷食物列表，打印索引和對應的食物
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("dish: " + dishes[index])  # 打印對應的食物
+
+# 使用 for 迴圈，同時列出朋友和他們喜愛的食物
+for index in range(0, 4):  
+    print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])  </pre>
+<p></p>
+<p>第九題:</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter9-1.py">動物</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 動物清單
+animals = ["giraffe", "penguin", "dolphin"]
+print(animals)  # 輸出清單
+
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):  # 使用 len() 動態取得清單長度
+    print("-- Beginning of loop --")
+    # 輸出每個元素及其位置
+    print("The element in position " + str(i) + " is " + animals[i])
+
+# 想要看到的動物
+wanted_to_see = "penguin"
+
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):
+    # 如果當前的動物是想看的那個
+    if animals[i] == wanted_to_see:
+        # 輸出特別訊息
+        print("I saw a " + animals[i] + " and I really wanted to see it!")
+    # 如果當前的動物不是特別想看的那個
+    else:
+        # 輸出一般訊息
+        print("I saw a " + animals[i])</pre>
+<p></p>
+<p>第十題</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/c4c3528bd90eb178b70894a29df7c2a0bbaf5cdc/Jupyter10-1.py">物品位置</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
+print(accessories)
+
+# 逐一列出元素及其位置
+for i in range(len(accessories)):
+    print(f"The element {accessories[i]} is in position {i}")
+
+# 列出長度等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) == 6:
+        print(f"The element {accessories[i]} is in position {i} and it has 6 characters")
+
+# 列出長度小於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) &lt; 6:
+        print(f"The element {accessories[i]} is in position {i} and it has less than 6 characters")
+
+# 定義閾值：6，列出長度大於 6 的元素
+n_of_characters = 6
+for i in range(len(accessories)):
+    if len(accessories[i]) &gt; n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has more than {n_of_characters} characters")
+
+# 定義閾值：6，列出長度不等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) != n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has a number of characters different from {n_of_characters}")
+
+# 定義閾值：2，列出位置小於或等於 2 的元素
+position = 2
+for i in range(len(accessories)):
+    if i &lt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is less than or equal to {position}")
+
+# 定義閾值：2，列出位置大於或等於 2 的元素
+for i in range(len(accessories)):
+    if i &gt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is at least {position}")
 </pre>
 <p></p>
-<div id="gtx-trans" style="position: absolute; left: -15px; top: 435.525px;">
+<div id="gtx-trans" style="position: absolute; left: -7px; top: 1890.52px;">
 <div class="gtx-trans-icon"></div>
 </div><br />w11_hw << <a href='w11_hw.html'>Previous</a> <a href='w13_hw.html'>Next</a> >> w13_hw</div>
         

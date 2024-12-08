@@ -437,7 +437,7 @@ planets = planets[0:2] + ["Venus"] + planets[2:5]
 print (planets)
 planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
 print(planets)</pre>
-<p>房間</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/03aacdd158b60ed8caacb49261ccaa5c8d7dc759/Jupyter7-3.py">房間</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
 print(house)  # 原始列表
 
@@ -459,6 +459,89 @@ try:
     print(house)  # 此處會觸發 NameError
 except NameError:
     print("The variable 'house' no longer exists.")
+</pre>
+<p></p>
+<p><span></span>第八題:</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/fec45192bba5c3b35666186f882c17d5c4785563/Jupyter8-1.py">朋友喜歡的菜</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">friends = ["Geetha", "Luca", "Daisy", "Juhan"]
+dishes  = ["sushi", "burgers", "tacos", "pizza"]
+print ("My friends' names are:")
+print (friends)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("friend: " + friends[index])
+print ("Their favorite dishes are:")
+print (dishes)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("dish: " + dishes[index])
+for index in range (0,4):
+    print ("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
+<p></p>
+<p>第九題:</p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/6c1583422b2669384b2d3f1db01f0b18a5a2fed0/Jupyter9-1.py">動物</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">animals = ["giraffe", "penguin", "dolphin"]
+print(animals)
+
+# For each position in the list
+for i in range(0, len(animals)):
+    print("-- Beginning of loop --")
+    # Print each element and its position
+    print("The element in position " + str(i) + " is " + animals[i])
+
+wanted_to_see = "penguin"
+
+# For each position in the list
+for i in range(0, len(animals)):
+    # If the current animal is what you really wanted to see
+    if animals[i] == wanted_to_see:
+        # Print out that that's the animal you really wanted to see
+        print("I saw a " + animals[i] + " and I really wanted to see it!")
+    # If the current animal is not what you really wanted to see
+    else:
+        # Just print out that you saw it
+        print("I saw a " + animals[i])
+</pre>
+<p></p>
+<p>第十題</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
+print(accessories)
+
+# 逐一列出元素及其位置
+for i in range(len(accessories)):
+    print(f"The element {accessories[i]} is in position {i}")
+
+# 列出長度等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) == 6:
+        print(f"The element {accessories[i]} is in position {i} and it has 6 characters")
+
+# 列出長度小於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) &lt; 6:
+        print(f"The element {accessories[i]} is in position {i} and it has less than 6 characters")
+
+# 定義閾值：6，列出長度大於 6 的元素
+n_of_characters = 6
+for i in range(len(accessories)):
+    if len(accessories[i]) &gt; n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has more than {n_of_characters} characters")
+
+# 定義閾值：6，列出長度不等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) != n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has a number of characters different from {n_of_characters}")
+
+# 定義閾值：2，列出位置小於或等於 2 的元素
+position = 2
+for i in range(len(accessories)):
+    if i &lt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is less than or equal to {position}")
+
+# 定義閾值：2，列出位置大於或等於 2 的元素
+for i in range(len(accessories)):
+    if i &gt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is at least {position}")
 </pre>
 <p></p><h3>w13_hw</h3>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
