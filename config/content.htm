@@ -709,61 +709,19 @@ for i in range(len(accessories)):
 <p>這些範例涵蓋了 Python 的多個概念，像第三題的if...in.../else...很實用，特別是在設計購物網站或庫存管理系統時。檢查物品是否在列表中，很簡單卻快速的程式，能解決現實生活中需要統計重複且大量的資料。這些技能在各種應用程式開發中都非常實用，從問候、清單管理到搜尋物品，應用範圍廣泛。學習程式設計不僅是寫代碼，還是在訓練邏輯思維。</p>
 </div>
 </div><h3>w13_hw</h3>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/0e389de17ac3d429a774dcda259982b99dbf34c5/test-3.py">繪製兩個棋盤</a></p>
 <p></p>
-<p>中間填入顏色</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html
-from browser import document as doc
-
-# 利用 html 建立 canvas 超文件物件
-canvas = html.CANVAS(width = 400, height = 400)
-brython_div = doc["brython_div1"]
-brython_div &lt;= canvas
-
-# 每一格的 pixel 數
-gs = 200
-
-# gs*tc = canvas width and height
-
-ctx = canvas.getContext("2d")
-
-width = 1
-height = 1
-
-for i in range(width):
-    for j in range(height):
-        ctx.lineWidth = 1
-        ctx.strokeStyle = '#ff0000'  # 邊框顏色為紅色
-
-        # 根據條件設置不同的填充顏色
-        if (i + j) % 2 == 0:
-            ctx.fillStyle = '#ffff00'  # 填充顏色為黃色
-        else:
-            ctx.fillStyle = '#00ff00'  # 填充顏色為綠色
-
-        ctx.beginPath()
-        ctx.rect(i * gs, j * gs, gs, gs)
-        ctx.fill()  # 填充顏色
-        ctx.stroke()  # 畫邊框
-
-
-offset_x = 100
-offset_y = 100
-
-for i in range(width):
-    for j in range(height):
-        ctx.lineWidth = 1
-        ctx.strokeStyle = '#ff0000'
-        if (i + j) % 2 == 0:
-            ctx.fillStyle = '#000ff0'  # 填充顏色為黃色
-        else:
-            ctx.fillStyle = '#00ff00'
-        ctx.beginPath()
-        ctx.rect(i * gs + offset_x, j * gs + offset_y, gs, gs)
-        ctx.fill()
-        ctx.stroke()</pre>
-<p></p><h1>HW 2</h1>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
+<p><img alt="" height="337" src="/images/線條.png" width="333"/></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/0e389de17ac3d429a774dcda259982b99dbf34c5/test-3.py"></a><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/e02f0d212a300712be216b39b866ab823624fcf6/circle.py">在繪製兩個外切圓</a></p>
+<p><img alt="" height="500" src="/images/線條圓.png" width="500"/></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/f2bfc003b26eb71110fdf209317d3988ff0ff5c7/circle+color-1.py">中間填入顏色</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/e02f0d212a300712be216b39b866ab823624fcf6/circle+color-2.py">由AI縮短</a></p>
+<p><img alt="" height="500" src="/images/上色.png" width="500"/></p>
+<p></p>
+<p></p>
+<div id="gtx-trans" style="position: absolute; left: 22px; top: 952.925px;">
+<div class="gtx-trans-icon"></div>
+</div><h1>HW 2</h1>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">主題：Python的數列、判斷式與重複迴圈 (20%)</span></span><span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Python 課程教材：</span></span><a href="https://www.learnpythonwithjupyter.com/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://www.learnpythonwithjupyter.com/</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> - PART 2 與 Part 3</span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">馬尼拉HW 1網頁資料整理與程序練習方法，整理以下（20%）：</span></span></p>

@@ -142,61 +142,19 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2<br /><h1>w13_hw</h1>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
-<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/0e389de17ac3d429a774dcda259982b99dbf34c5/test-3.py">繪製兩個棋盤</a></p>
 <p></p>
-<p>中間填入顏色</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html
-from browser import document as doc
-
-# 利用 html 建立 canvas 超文件物件
-canvas = html.CANVAS(width = 400, height = 400)
-brython_div = doc["brython_div1"]
-brython_div &lt;= canvas
-
-# 每一格的 pixel 數
-gs = 200
-
-# gs*tc = canvas width and height
-
-ctx = canvas.getContext("2d")
-
-width = 1
-height = 1
-
-for i in range(width):
-    for j in range(height):
-        ctx.lineWidth = 1
-        ctx.strokeStyle = '#ff0000'  # 邊框顏色為紅色
-
-        # 根據條件設置不同的填充顏色
-        if (i + j) % 2 == 0:
-            ctx.fillStyle = '#ffff00'  # 填充顏色為黃色
-        else:
-            ctx.fillStyle = '#00ff00'  # 填充顏色為綠色
-
-        ctx.beginPath()
-        ctx.rect(i * gs, j * gs, gs, gs)
-        ctx.fill()  # 填充顏色
-        ctx.stroke()  # 畫邊框
-
-
-offset_x = 100
-offset_y = 100
-
-for i in range(width):
-    for j in range(height):
-        ctx.lineWidth = 1
-        ctx.strokeStyle = '#ff0000'
-        if (i + j) % 2 == 0:
-            ctx.fillStyle = '#000ff0'  # 填充顏色為黃色
-        else:
-            ctx.fillStyle = '#00ff00'
-        ctx.beginPath()
-        ctx.rect(i * gs + offset_x, j * gs + offset_y, gs, gs)
-        ctx.fill()
-        ctx.stroke()</pre>
-<p></p><br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/1bdc559022a06057fa3463897b7e9825aae1c77f/test-4.py">繪製交疊框</a></p>
+<p><img alt="" height="337" src="./../images/線條.png" width="333"/></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/0e389de17ac3d429a774dcda259982b99dbf34c5/test-3.py"></a><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/e02f0d212a300712be216b39b866ab823624fcf6/circle.py">在繪製兩個外切圓</a></p>
+<p><img alt="" height="500" src="./../images/線條圓.png" width="500"/></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/f2bfc003b26eb71110fdf209317d3988ff0ff5c7/circle+color-1.py">中間填入顏色</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/e02f0d212a300712be216b39b866ab823624fcf6/circle+color-2.py">由AI縮短</a></p>
+<p><img alt="" height="500" src="./../images/上色.png" width="500"/></p>
+<p></p>
+<p></p>
+<div id="gtx-trans" style="position: absolute; left: 22px; top: 952.925px;">
+<div class="gtx-trans-icon"></div>
+</div><br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
