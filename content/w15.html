@@ -151,6 +151,23 @@ upto = 100
 for i in range(init, upto+1):
     sum = sum + i
 print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/2d60bc3f72192e8c0b3cd036f220a35b145da4a8/addto.py">addto</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義 addto 函式
+def addto(init, upto):
+    # 初始化 sum 為 0
+    sum = 0
+    # 利用 for 迴圈進行累加
+    for i in range(init, upto + 1):
+        sum = sum + i
+    return sum
+
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print("從" + str(init) + "累加到" + str(upto) + "=" + str(result))
+</pre>
 <p></p><br />HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w7.html'>Next</a> >> w7</div>
         
     <!-- footer -->
