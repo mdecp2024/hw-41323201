@@ -141,10 +141,71 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w10.html'>Next</a> >> w10<br /><h1>w7</h1>
-<p>如何在倉儲中增加Brython:</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/vB0rFaSJhcc" width="560"></iframe></p>
-<br />HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w10.html'>Next</a> >> w10</div>
+    <div id="tipue_search_content">HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3<br /><h1>w16_exam1</h1>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/9aad454b0ee46fbc99cd3dffc8ae6df29d54ecd6/w16_exam1">w16_exam1</a></p>
+<p></p>
+<p>補影片</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import document
+from browser.svg import svg, line, text, polygon, rect, circle
+
+# 設定繪圖參數
+origin_x, origin_y = 32, 1
+pixel_size = 2
+
+# 建立繪圖區域
+svg_area = svg(width=500, height=500)
+document &lt;= svg_area
+
+# 繪製 X 軸
+svg_area &lt;= line(x1=origin_x, y1=origin_y, x2=500, y2=origin_y, stroke="black", stroke_width=pixel_size)
+svg_area &lt;= text("X", x=480, y=origin_y + 15, font_size="12px")
+
+# 繪製 Y 軸
+svg_area &lt;= line(x1=origin_x, y1=origin_y, x2=origin_x, y2=500, stroke="black", stroke_width=pixel_size)
+svg_area &lt;= text("Y", x=origin_x - 15, y=490, font_size="12px")
+
+# 標示原點
+svg_area &lt;= text("(32, 01)", x=origin_x + 5, y=origin_y + 15, font_size="12px")
+
+# 繪製圖形
+# 等腰六邊形（準確的等腰六邊形）
+hexagon_points = [
+    (40, 105),  # 左上
+    (60, 70),   # 上中
+    (100, 70),   # 右上
+    (120, 105), # 右下
+    (100, 140),  # 下中
+    (60, 140)   # 左下
+]
+svg_area &lt;= polygon(points=" ".join(f"{x},{y}" for x, y in hexagon_points), fill="orange")
+
+# 菱形（正確位置與比例）
+diamond_points = [
+    (132.5, 105),  # 左
+    (155, 60),  # 上
+    (177.5, 105),  # 右
+    (155, 145)   # 下
+]
+svg_area &lt;= polygon(points=" ".join(f"{x},{y}" for x, y in diamond_points), fill="teal")
+
+# 小型三角形（在菱形右下方）
+triangle_points = [
+    (185, 110),  # 左下
+    (165, 145),  # 頂點
+    (205, 145)   # 右下
+]
+svg_area &lt;= polygon(points=" ".join(f"{x},{y}" for x, y in triangle_points), fill="cyan")
+
+# 圓形
+svg_area &lt;= circle(cx=240, cy=105, r=35, fill="magenta")
+
+# 正方形
+svg_area &lt;= rect(x=290, y=70, width=70, height=70, fill="gold")
+
+# 長方形
+svg_area &lt;= rect(x=380, y=90, width=90, height=30, fill="navy")
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> </span></span></p><br />HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
         
     <!-- footer -->
       <div class="container">

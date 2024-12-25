@@ -737,6 +737,8 @@ upto = 100
 for i in range(init, upto+1):
     sum = sum + i
 print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))</pre>
+<p></p>
+<p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/2d60bc3f72192e8c0b3cd036f220a35b145da4a8/addto.py">addto</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義 addto 函式
 def addto(init, upto):
@@ -754,6 +756,8 @@ upto = 100
 result = addto(init, upto)
 print("從" + str(init) + "累加到" + str(upto) + "=" + str(result))
 </pre>
+<p></p>
+<p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/19cc81c31058cc134ffa1ce2bce96702bcdef0da/add_only_even.py">add_only_even</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義 addto 函式
 def addto(init, upto):
@@ -772,6 +776,8 @@ upto = 100
 result = addto(init, upto)
 print("從" + str(init) + "累加到" + str(upto) + "的偶數和=" + str(result))
 </pre>
+<p></p>
+<p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/19cc81c31058cc134ffa1ce2bce96702bcdef0da/add_avold_8.py">add_avold_8</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 定義 addto 函式
 def addto(init, upto):
@@ -791,7 +797,10 @@ result = addto(init, upto)
 print("從" + str(init) + "累加到" + str(upto) + "，只加尾數為8的數=" + str(result))</pre>
 <p></p>
 <p></p>
-<p></p><h1>HW 2</h1>
+<p></p>
+<p></p>
+<p></p>
+<h1>HW 2</h1>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">主題：Python的數列、判斷式與重複迴圈 (20%)</span></span><span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Python 課程教材：</span></span><a href="https://www.learnpythonwithjupyter.com/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://www.learnpythonwithjupyter.com/</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> - PART 2 與 Part 3</span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">馬尼拉HW 1網頁資料整理與程序練習方法，整理以下（20%）：</span></span></p>
@@ -801,13 +810,85 @@ print("從" + str(init) + "累加到" + str(upto) + "，只加尾數為8的數="
 <h2>HW 2 Exam</h2>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Practice good procedures in groups of six</span></span></span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">透過 Jupyterlab 良好的網頁，輪流指定各組編寫的 HW 2 相關的程式練習，以及網頁內容（localhost 與 Codespaces 環境）編輯。</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<h3>w16_exam1</h3>
+<p></p>
+<p></p>
+<p>補影片</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import document
+from browser.svg import svg, line, text, polygon, rect, circle
+
+# 設定繪圖參數
+origin_x, origin_y = 32, 1
+pixel_size = 2
+
+# 建立繪圖區域
+svg_area = svg(width=500, height=500)
+document &lt;= svg_area
+
+# 繪製 X 軸
+svg_area &lt;= line(x1=origin_x, y1=origin_y, x2=500, y2=origin_y, stroke="black", stroke_width=pixel_size)
+svg_area &lt;= text("X", x=480, y=origin_y + 15, font_size="12px")
+
+# 繪製 Y 軸
+svg_area &lt;= line(x1=origin_x, y1=origin_y, x2=origin_x, y2=500, stroke="black", stroke_width=pixel_size)
+svg_area &lt;= text("Y", x=origin_x - 15, y=490, font_size="12px")
+
+# 標示原點
+svg_area &lt;= text("(32, 01)", x=origin_x + 5, y=origin_y + 15, font_size="12px")
+
+# 繪製圖形
+# 等腰六邊形（準確的等腰六邊形）
+hexagon_points = [
+    (40, 105),  # 左上
+    (60, 70),   # 上中
+    (100, 70),   # 右上
+    (120, 105), # 右下
+    (100, 140),  # 下中
+    (60, 140)   # 左下
+]
+svg_area &lt;= polygon(points=" ".join(f"{x},{y}" for x, y in hexagon_points), fill="orange")
+
+# 菱形（正確位置與比例）
+diamond_points = [
+    (132.5, 105),  # 左
+    (155, 60),  # 上
+    (177.5, 105),  # 右
+    (155, 145)   # 下
+]
+svg_area &lt;= polygon(points=" ".join(f"{x},{y}" for x, y in diamond_points), fill="teal")
+
+# 小型三角形（在菱形右下方）
+triangle_points = [
+    (185, 110),  # 左下
+    (165, 145),  # 頂點
+    (205, 145)   # 右下
+]
+svg_area &lt;= polygon(points=" ".join(f"{x},{y}" for x, y in triangle_points), fill="cyan")
+
+# 圓形
+svg_area &lt;= circle(cx=240, cy=105, r=35, fill="magenta")
+
+# 正方形
+svg_area &lt;= rect(x=290, y=70, width=70, height=70, fill="gold")
+
+# 長方形
+svg_area &lt;= rect(x=380, y=90, width=90, height=30, fill="navy")
+</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> </span></span></p>
 <h1>HW 3</h1>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">主題：Python 的數字、算法與迴圈 (20%)</span></span></h4>
 <p style="padding-left: 30px;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Python 課程教材： https: </span></span><a href="https://www.learnpythonwithjupyter.com/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">//www.learnpythonwithjupyter.com/</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> - PART 4 與 Part 5</span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">完成上述流程整理後，滿足HW3自評分數輸入cp2024自評表單中。</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
 <h2>HW 3 Exam</h2>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Practice good procedures in groups of six</span></span></span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">透過 Jupyterlab 良好的網頁，輪流指定各組編寫的 HW 3 相關的程式練習，以及網頁內容（localhost 與 Codespaces 環境）編輯。</span></span></p>
+<p></p>
+<h3><span>w16_exam2</span></h3>
+<p><span></span></p>
 <h1>HW 4</h1>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">主題：利用Python控制機電模擬系統（20%）</span></span></h4>
 <p style="padding-left: 30px;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">利用 </span></span><a href="https://solvespace.com/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://solvespace.com/</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> 建立機械系統零組件</span></span></p>
@@ -820,6 +901,8 @@ print("從" + str(init) + "累加到" + str(upto) + "，只加尾數為8的數="
 <h2>HW 4 Exam</h2>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Practice good procedures in groups of six</span></span></span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">透過 Jupyterlab 良好的網頁，輪流指定各組編寫的 HW 4 相關的程式練習，以及網頁內容（localhost 與 Codespaces 環境）編輯。</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<h3><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>w16_exam3</span></span></span></h3>
 <h1>Final Report</h1>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">期末口腔與書面專題報告 (20%)</span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">期末口腔專題報告影片：</span></span></p>
